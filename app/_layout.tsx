@@ -1,29 +1,15 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
-import 'react-native-reanimated';
+import { Stack } from "expo-router";
 
-import { useColorScheme } from '@/hooks/useColorScheme';
-
-export default function RootLayout() {
-  const colorScheme = useColorScheme();
-  const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-  });
-
-  if (!loaded) {
-    // Async font loading only occurs in development.
-    return null;
-  }
-
+export default function Layout() {
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
-      <StatusBar style="auto" />
-    </ThemeProvider>
+    <Stack>
+      <Stack.Screen name="index" options={{ title: "Home" }} />
+      <Stack.Screen name="exerc1" options={{ title: "Exercício 1" }} />
+      <Stack.Screen name="exerc2" options={{ title: "Exercício 2" }} />
+      <Stack.Screen name="exerc3" options={{ title: "Exercício 3" }} />
+      <Stack.Screen name="exerc4" options={{ title: "Exercício 4" }} />
+      <Stack.Screen name="exerc5" options={{ title: "Exercício 5" }} />
+      <Stack.Screen name="exerc6" options={{ title: "Exercício 6" }} />
+    </Stack>
   );
 }

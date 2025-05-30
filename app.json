@@ -37,6 +37,13 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "88e38e92-7e62-412e-a1b1-aecee17231b0"
+      }
+    },
+    "owner": "paterni"
   }
 }

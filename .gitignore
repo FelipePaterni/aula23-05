@@ -2,6 +2,7 @@
 
 # dependencies
 node_modules/
+app-exemple/
 
 # Expo
 .expo/
